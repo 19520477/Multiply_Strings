@@ -8,7 +8,7 @@ Given two non-negative integers num1 and num2 represented as strings, return the
 
 ## Flowchart
 
-![Multiply Strings Flowchart](./imgs/multiply_strings_flowchart.png)
+![Multiply Strings Flowchart](./imgs/multiply_strings_flowchart.jpg)
 
 ## Explain Algorithm
 
@@ -17,7 +17,8 @@ It contains:
 
 - Check all of characters of string are valid or not (invalid with non-numberic character), implements in validateNumber function at [validate.js](./libs/validate.js)
 - If string is valid, carry out converting it to number, by summing of char.charCodeAt() - 48 returning Unicode value of a char multiply with the value of 10 to the power of char's units place. For example , 123 is 1*10^2 + 2*10^1 + 3\*10^0. This feature implemnts in convertStringToNumber function at [convert.js](./libs/convert.js)
-- After converting, multiply numbers. Using handleSign function determines the sign of result: if
+- After converting, multiply numbers. Using handleSign function determines the sign of result: if both two params have the same sign, return the value of result without "-" and formatted string; otherwise, return the value of result with "-" and formatted string (ex: 2*2 = 4, (-2)*(-2) = 4, (-2)\*2 = (-4)).
+- Multiply function is implemented at [index.js](./index.js); handleSign and pow function are implemented at [math.js](./libs/math.js)
 
 ## Technologies
 
